@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title</title>
-    <meta name="description" content="Description" />
 
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Drum Machine</title>
+  <meta name="description" content="Description" />
 
-    <link rel="manifest" href="manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+  <!-- Title -->
+  <meta property="og:title" content="" />
+  <!-- OPTIONAL description. 2-4 sentences. -->
+  <meta property="og:description" content="" />
+  <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
+  <meta property="og:url" content="" />
+  <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
+  <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/pwa/icons/icon-192x192.png" />
 
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <h1>Hello world - with simple PWA support!</h1>
+  <link rel="icon" type="image/png" href="assets/pwa/icons/icon-192x192.png" />
 
-    <script src="js/main.js"></script>
-  </body>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1 class="hero__title">Drum Machine</h1>
+
+  </header>
+  <section class="keys">
+    <div class="keys__buttom" data-key="65">
+      <kbd class="keys__buttom--letter">A</kbd>
+      <span class="keys__buttom--id">boom</span>
+    </div>
+    <div class="keys__buttom" data-key="83">
+      <kbd class="keys__buttom--letter">S</kbd>
+      <span class=" keys__buttom--id">clap</span>
+    </div>
+    <div class="keys__buttom" data-key="68">
+      <kbd class="keys__buttom--letter">D</kbd>
+      <span class=" keys__buttom--id">hihat</span>
+    </div>
+    <div class="keys__buttom" data-key="70">
+      <kbd class="keys__buttom--letter">F</kbd>
+      <span class=" keys__buttom--id">kick</span>
+    </div>
+    <div class="keys__buttom" data-key="71">
+      <kbd class="keys__buttom--letter">G</kbd>
+      <span class=" keys__buttom--id">openhat</span>
+    </div>
+    <div class="keys__buttom" data-key="72">
+      <kbd class="keys__buttom--letter">H</kbd>
+      <span class=" keys__buttom--id">ride</span>
+    </div>
+    <div class="keys__buttom" data-key="74">
+      <kbd class="keys__buttom--letter">J</kbd>
+      <span class=" keys__buttom--id">snare</span>
+    </div>
+    <div class="keys__buttom" data-key="75">
+      <kbd class="keys__buttom--letter">K</kbd>
+      <span class=" keys__buttom--id">tom</span>
+    </div>
+    <div class="keys__buttom" data-key="76">
+      <kbd class="keys__buttom--letter">L</kbd>
+      <span class=" keys__buttom--id">tin</span>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>

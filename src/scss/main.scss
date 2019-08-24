@@ -1,9 +1,21 @@
 @import "_normalize";
 @import "_variables";
+@import"../scss/Keys.scss";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,700i,900,900i&display=swap&subset=latin-ext');
 
+@import url(https://fonts.googleapis.com/css?family=Oswald:400|Open+Sans:700);
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
 
 html {
-  box-sizing: border-box;
+ box-sizing: border-box;
+  font-size: 16px;  
+  scroll-behavior: smooth;
+  
 }
 
 *, *:before, *:after {
@@ -11,6 +23,7 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  background: rgb(219,213,212);
+background: linear-gradient(90deg, rgba(219,213,212,1) 6%, rgba(240,239,235,0.9948354341736695) 30%, rgba(120,167,176,1) 100%);
+
 }
