@@ -1,22 +1,26 @@
 "use strict";
 
-// service worker registration - remove if you're not going to use it
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
+
+function playSound(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key__buttom[data-key="${e.keyCode}"]`);
+    if (!audio) return;
+    
+    audio.currentTime = 0;
+    audio.play();
+    key.classList.add('playing');
 }
 
-// place your code below
 
 
-console.log(`Hello world!`);
 
 
+
+const keys = Array.from(document.querySelectorAll('.key__buttom'));
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+window.addEventListener('keydown', playSound);
+function removeTransition(e) {
+  if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');
+}
